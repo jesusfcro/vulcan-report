@@ -12,3 +12,5 @@ jobs:
       contents: write   # Needed to elevate secret.GITHUB_TOKEN permissions.
     steps:
     - uses: jesusfcro/release-action@master
+      with:
+        author: jesusfcr
