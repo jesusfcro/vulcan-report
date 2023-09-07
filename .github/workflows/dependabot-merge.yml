@@ -6,4 +6,4 @@ jobs:
   approve:
     uses: jesusfcro/release-action/.github/workflows/approve-workflow.yaml@master
     with:
-      author: Jesus Carpintero
+      author: jesusfcr
