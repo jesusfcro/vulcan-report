@@ -4,7 +4,13 @@ on:
     - cron:  '30 5,17 * * 1,2'  # Try some times to allow deps to propagate.
   workflow_dispatch:    # Manual in case needed
 jobs:
-  dependabot-auto-tag:
+  release:
     uses: jesusfcro/release-action/.github/workflows/release-workflow.yaml@master
     with:
       author: Jesus Carpintero
+
+  job2:
+    runs-on: ubuntu-latest
+    needs: release
+    steps:
+      - run: echo ${{ needs.release.outputs.tag }}
