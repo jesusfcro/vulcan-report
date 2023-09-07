@@ -10,4 +10,4 @@ jobs:
     permissions:
       contents: write   # Needed to elevate secret.GITHUB_TOKEN permissions.
     with:
-      author: jesusfcr
+      author: Jesus Carpintero
