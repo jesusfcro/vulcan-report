@@ -5,9 +5,6 @@ on:
   workflow_dispatch:    # Manual in case needed
 jobs:
   dependabot-auto-tag:
-    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     uses: jesusfcro/release-action/.github/workflows/release-workflow.yaml@master
-    permissions:
-      contents: write   # Needed to elevate secret.GITHUB_TOKEN permissions.
     with:
       author: Jesus Carpintero
