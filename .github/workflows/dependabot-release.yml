@@ -6,11 +6,3 @@ on:
 jobs:
   release:
     uses: jesusfcro/release-action/.github/workflows/release-workflow.yaml@master
-    with:
-      author: Jesus Carpintero
-
-  job2:
-    runs-on: ubuntu-latest
-    needs: release
-    steps:
-      - run: echo ${{ needs.release.outputs.tag }}
